@@ -1,0 +1,56 @@
+<style type="text/css">
+    
+
+.name {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #512DA8;
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
+  line-height: 45px
+</style>
+
+
+<div class="border-0" ng-repeat="(key, value) in details">
+        
+        <div class="container">
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-sm-2 name">{{value.initials}}</div>
+                <div class="col-sm-10" >
+                    <span>{{value.contact_name}}</span>
+                    <div>{{value.updated_at}}</div>
+                </div>
+              </div>
+            <hr class="my-4">
+              <div class="row">
+                  <div class="col-sm-2">
+                      <i class="fa fa-map-marker"></i>
+                      <span>{{value.suburbName}}</span> <span>{{value.postcode}}</span>
+                  </div>
+                <div class="col-sm-2">
+                    <i class="fa fa-briefcase"></i>
+                    <span>{{value.categoryName}}</span></div>
+                <div class="col-sm-2">Job Id :<span>{{value.jobId}}</span></div>
+                <div class="col-sm-2">$<span>{{value.price}}</span> Lead Invitation</div>
+              </div>
+            <hr class="my-4">
+            <div class="row">
+                    <div class="col-sm-2">
+                        <i class="fa fa-phone"></i>
+                        {{value.contact_phone}}
+                    </div>
+                    <div class="col-sm-2">
+                        <i class="fa fa-envelope"></i>
+                        {{value.contact_email}}
+                    </div>
+              </div>
+            <hr class="my-4">
+              <div class="row">
+                <div class="col-sm">{{value.description}}</div>
+              </div>
+            <hr class="my-4">
+      </div>
+</div>

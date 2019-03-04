@@ -1,0 +1,47 @@
+<style type="text/css">
+.name {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #512DA8;
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
+  line-height: 45px
+</style>
+
+<div class="border-0" ng-repeat="(key, value) in details">
+        
+        <div class="container" id="invited">
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-sm-2 name">{{value.initials}}</div>
+                <div class="col-sm-10" >
+                    <span>{{value.contact_name}}</span>
+                    <div>{{value.created_at}}</div>
+                </div>
+              </div>
+            <hr class="my-4">
+              <div class="row">
+                  <div class="col-sm-2">
+                      <i class="fa fa-map-marker"></i>
+                      <span>{{value.suburbName}}</span> <span>{{value.postcode}}</span>
+                  </div>
+                <div class="col-sm-2">
+                    <i class="fa fa-briefcase"></i>
+                    <span>{{value.categoryName}}</span></div>
+                <div class="col-sm-2">Job Id :<span>{{value.jobId}}</span></div>
+              </div>
+            <hr class="my-4">
+              <div class="row">
+                <div class="col-sm">{{value.description}}</div>
+              </div>
+            <hr class="my-4">
+            <div class="row">
+                <button type="button" class="btn btn-primary" ng-click="UpdateInfo({id :value.jobId,op:'2'})">Accept</button>                
+                <button type="button" class="btn btn-light" ng-click="UpdateInfo({id :value.jobId,op:'3'})">Decline</button>
+                $<span>{{value.price}}</span> Lead Invitation
+              </div>
+            <hr class="my-4">
+      </div>
+</div>
